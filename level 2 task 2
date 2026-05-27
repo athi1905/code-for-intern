@@ -1,0 +1,24 @@
+import random
+
+start = int(input("Enter the starting range: "))
+end = int(input("Enter the ending range: "))
+
+secret_number = random.randint(start, end)
+
+print(f"\nGuess the number between {start} and {end}")
+
+while True:
+
+    
+    guess = int(input("Enter your guess: "))
+
+    
+    if guess > secret_number:
+        print("Too high!")
+
+    elif guess < secret_number:
+        print("Too low!")
+
+    else:
+        print("Correct! You guessed the number.")
+        break

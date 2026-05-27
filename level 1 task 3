@@ -1,0 +1,29 @@
+def validate_email(email):
+   
+    if email.count("@") != 1:
+        return False
+
+   
+    username, domain = email.split("@")
+
+   
+    if username == "" or domain == "":
+        return False
+
+  
+    if "." not in domain:
+        return False
+
+domain_parts = domain.split(".")
+    if "" in domain_parts:
+        return False
+
+    return True
+
+
+email = input("Enter an email address: ")
+
+if validate_email(email):
+    print("Valid Email Address")
+else:
+    print("Invalid Email Address")
